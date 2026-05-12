@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profil Pribadi Saya</title>
+
+    <style>
+        /* ===== STYLE DASAR ===== */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            border-radius: 50%; 
+        }
+
+        /* ===== CONTAINER FLEX ===== */
+        .container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* KIRI & KANAN */
+        .left, .right {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        /* TABEL */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* FORM */
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 100%;
+        }
+
+        /* ===== RESPONSIVE ===== */
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== JUDUL ===== -->
+    <h1 id="judul" title="Halaman Profil">Profil Pribadi Saya</h1>
+
+    <!-- ===== GAMBAR ===== -->
+    <center>
+        <img src="zara.jpeg" alt="Foto Profil" width="150" height="150" class="foto">
+    </center>
+
+    <!-- ===== PARAGRAF ===== -->
+    <p class="data">Nama Lengkap: Rumina Aulia Az-zahra</p>
+    <p class="data">NIM: 246250005</p>
+    <p class="data">Hobi: Menyanyi, Dance</p>
+
+    <!-- ===== FLEX CONTAINER ===== -->
+    <div class="container">
+
+        <!-- ===== KIRI ===== -->
+        <div class="left">
+
+            <!-- TABEL BIODATA -->
+            <h2>Biodata</h2>
+            <table id="biodata" title="Tabel Biodata">
+                <tr>
+                    <th>Data</th>
+                    <th>Keterangan</th>
+                </tr>
+                <tr>
+                    <td>Nama</td>
+                    <td>Rumina Aulia Az-zahra</td>
+                </tr>
+                <tr>
+                    <td>Tanggal Lahir</td>
+                    <td>17 Desember 2005</td>
+                </tr>
+                <tr>
+                    <td>Alamat</td>
+                    <td>Jl. umar syarif</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>captainzaraa@email.com</td>
+                </tr>
+            </table>
+
+            <!-- LIST -->
+            <h2>Hobi</h2>
+
+            <ul class="hobi">
+                <li>Membaca</li>
+                <li>Menulis</li>
+                <li>Menonton</li>
+            </ul>
+
+            <ol class="aktivitas">
+                <li>Bangun tidur</li>
+                <li>Membersihkan Rumah</li>
+                <li>Kuliah</li>
+            </ol>
+
+        </div>
+
+        <!-- ===== KANAN ===== -->
+        <div class="right">
+
+            <!-- FORM -->
+            <h2>Form Data</h2>
+            <form id="formulir" title="Form Input">
+
+                <!-- Nama -->
+                <label>Nama:</label>
+                <input type="text" name="nama">
+
+                <!-- Email -->
+                <label>Email:</label>
+                <input type="text" name="email">
+
+                <!-- Jenis Kelamin -->
+                <label>Jenis Kelamin:</label><br>
+                <input type="radio" name="jk"> Laki-laki<br>
+                <input type="radio" name="jk"> Perempuan<br><br>
+
+                <!-- Hobi -->
+                <label>Hobi:</label><br>
+                <input type="checkbox"> Membaca<br>
+                <input type="checkbox"> Menulis<br>
+                <input type="checkbox"> Gaming<br><br>
+
+                <!-- Submit -->
+                <input type="submit" value="Kirim">
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
